@@ -1,34 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// void main() {
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-
-//       home: Scaffold(
-//         body: Container(
-//           color: const Color.fromRGBO(210, 188, 213, 1),
-//           child: Center(
-//             child: Image(
-//               image: const AssetImage('images/birthdayCard.png'),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,151 +13,67 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Flutter'),
-          backgroundColor: Colors.deepPurpleAccent,
-        ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        appBar: AppBar(title: Text('Login Form')),
+        body: Column(
           children: [
-            Card(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const Image(
-                    image: AssetImage('images/Orange_logo.svg.png'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  SizedBox(
-                    width: 110,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
-                        ),
-                      ),
-                      child: Text(
-                        'Student 1',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.deepPurpleAccent,
-                        ),
+            Form(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        label: Text('Username'),
+                        hintText: 'example@gmail.com',
                       ),
                     ),
-                  ),
-                   SizedBox(
-                    height: 20,
-                  ),
-                  const Image(
-                    image: AssetImage('images/Orange_logo.svg.png'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  SizedBox(
-                    width: 110,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
-                        ),
-                      ),
-                      child: Text(
-                        'Student 2',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.deepPurpleAccent,
-                        ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(label: Text('Password')),
+                    ),
+                    SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(onPressed: () {}, child: Text('submit')),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Text('Sign Up Form', style: TextStyle(fontSize: 25)),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Form(
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(label: Text('Username')),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(label: Text('Email')),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(label: Text('Password')),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        label: Text('Confirm Password'),
                       ),
                     ),
-                  ),
-                   SizedBox(
-                    height: 20,
-                  ),
-                  const Image(
-                    image: AssetImage('images/Orange_logo.svg.png'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  SizedBox(
-                    width: 110,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
+                    SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Sign Up'),
                         ),
-                      ),
-                      child: Text(
-                        'Student 3',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.deepPurpleAccent,
-                        ),
-                      ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  const Image(
-                    image: AssetImage('images/Orange_logo.svg.png'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  SizedBox(
-                    width: 110,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
-                        ),
-                      ),
-                      child: Text(
-                        'Student 4',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.deepPurpleAccent,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  const Image(
-                    image: AssetImage('images/Orange_logo.svg.png'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  SizedBox(
-                    width: 110,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
-                        ),
-                      ),
-                      child: Text(
-                        'Student 5',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.deepPurpleAccent,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
